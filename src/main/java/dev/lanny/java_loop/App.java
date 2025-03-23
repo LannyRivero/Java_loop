@@ -1,17 +1,19 @@
 package dev.lanny.java_loop;
 
-/**
- * Hello world!
- */
 public final class App {
     private App() {
     }
 
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        MultiplicationTable table = new MultiplicationTable();
+
+        int n = 5;
+        System.out.println("Multiplication Table for " + n + ":");
+
+        for (String row : table.generateTable(n)) {
+            System.out.println(row);
+
+        }
+
     }
 }
